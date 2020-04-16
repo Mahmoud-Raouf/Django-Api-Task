@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'product',
+    'user',
     'rest_framework',
     'rest_framework_swagger',
-    'user',
 ]
 # swagger settings
 REST_FRAMEWORK = {'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
@@ -63,6 +63,10 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_SCHEMA_CLASS': 
+    (
+        'rest_framework.schemas.coreapi.AutoSchema' 
+    )
 }
 ROOT_URLCONF = 'project.urls'
 

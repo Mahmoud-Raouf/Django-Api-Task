@@ -22,10 +22,10 @@ urlpatterns = [
     path('api/product/', product.serializers.ProductList.as_view()),
     path('api/product/<int:id>/', product.serializers.ProductRetrieveUpdateDestroy.as_view()),
     
+    path('swagger/', schema_view),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     # swagger
-    path('swagger/', schema_view),
 
 ]
 
